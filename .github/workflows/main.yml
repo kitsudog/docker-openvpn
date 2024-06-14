@@ -18,7 +18,7 @@ jobs:
       - name: Env
         run: |
           env
-          echo "REPO_NAME=${GITHUB_REPOSITORY#*/}"|sed 's#=docker-##'|sed 's#=docker_##' >> $GITHUB_ENV
+          echo "REPO_NAME=${GITHUB_REPOSITORY#*/}"|sed 's#=docker-#=#'|sed 's#=docker_#=#' >> $GITHUB_ENV
       - name: Checkout
         uses: actions/checkout@v3
         with:
